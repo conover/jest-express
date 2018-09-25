@@ -35,6 +35,7 @@ export class Request {
   public acceptsEncodings: any;
   public acceptsLanguages: any;
   public get: any;
+  public header: any;
   public is: any;
   public range: any;
 
@@ -69,6 +70,7 @@ export class Request {
     this.acceptsEncodings = jest.fn();
     this.acceptsLanguages = jest.fn();
     this.get = jest.fn();
+    this.header = jest.fn();
     this.is = jest.fn();
     this.range = jest.fn();
 
@@ -141,6 +143,7 @@ export class Request {
     this.acceptsEncodings.mockReset();
     this.acceptsLanguages.mockReset();
     this.get.mockReset();
+    this.header.mockReset();
     this.is.mockReset();
     this.range.mockReset();
   }
